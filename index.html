@@ -1,0 +1,145 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <title>My Profile</title>
+  <style>
+    header {
+      background: url(img/stars.jpg);
+      background-size: cover;
+      background-position: center;
+      min-height: 300px;
+    }
+
+    @media screen and (max-width: 670px) {
+      header {
+        min-height: 500px;
+      }
+    }
+
+    .section {
+      padding-top: 4vw;
+      padding-bottom: 4vw;
+    }
+
+    .tabs .indicator {
+      background-color: #1a237e;
+    }
+
+    .tabs .tab a:focus,
+    .tabs .tab a:focus.active {
+      background: transparent;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <header>
+    <nav class="nav-wrapper transparent">
+      <div class="container">
+        <a href="#" class="brand-logo">Joseph Merlitz</a>
+        <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <ul class="sidenav grey lighten-2" id="mobile-menu">
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- photo / grid -->
+  <section class="container section" id="portfolio">
+    <div class="row">
+      <div class="col s12 l4">
+        <a href="https://josephmerlitz.github.io/unit-4-game/">
+          <img src="img/Crystal.jpg" alt="" class="responsive-img">
+        </a>
+      </div>
+      <div class="col s12 l6 offset-l1">
+        <h2 class="indigo-text text-darken-4">Crystal Collector</h2>
+        <p>Crystals have random values, click on a crystal to increase the score to get to the target number.  Hit the target or higher to the target to finnish the game.</p>
+        <p>Click <a href="https://github.com/josephmerlitz/unit-4-game">here</a> for the Github Repo.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 l4 offset-l1 push-l7">
+        <a href="https://worldofwarcraft-clicky-game.herokuapp.com/">
+          <img src="img/WorldofWarcraft.png" alt="">
+        </a>
+      </div>
+      <div class="col s12 l6 offset-l1 pull-l5 right-align">
+        <h2 class="indigo-text text-darken-4">Clicky Game</h2>
+        <p>Click on an image.  Score more points by clicking a different image with each click.  Images will change with each click.  Click the same image and the game is over.  Can you click on all 10 images?</p>
+        <p>Click <a href="https://github.com/josephmerlitz/Clicky-Game">here</a> for the Github Repo.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 l4">
+        <a href="http://afternoon-scrubland-64001.herokuapp.com/">
+          <img src="img/Pacman.png" alt="" class="responsive-img">
+        </a>
+      </div>
+      <div class="col s12 l6 offset-l1">
+        <h2 class="indigo-text text-darken-4">Flappy-Pac</h2>
+        <p>Play as Pacman, go through the course by clicking to fly up.  Hit a pipe or fall to the ground and the game is over.</p>
+        <p>Click <a href="https://github.com/josephmerlitz/Flappy-Pac">here</a> for the Github Repo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- parallax -->
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="img/stars.jpg" alt="" class="responsive-img">
+    </div>
+  </div>
+
+  <!-- contact form -->
+  <section class="section container scrollspy" id="contact">
+    <div class="row">
+        <h2 class="indigo-text text-darken-4">Get in Touch</h2>
+        <p>Email me at <a href="mailto:joseph.merlitz@gmail.com">joseph.merlitz@gmail.com</a> with any questions.</p>
+    </div>
+  </section>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      $('.sidenav').sidenav();
+      $('.materialboxed').materialbox();
+      $('.parallax').parallax();
+      $('.tabs').tabs();
+      $('.datepicker').datepicker({
+        disableWeekends: true,
+        yearRange: 1
+      });
+      $('.tooltipped').tooltip();
+      $('.scrollspy').scrollSpy();
+
+    });
+  </script>
+</body>
+
+</html>
